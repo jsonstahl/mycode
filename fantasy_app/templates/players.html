@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <h2>Top Fantasy Football Players for {{ year }}</h2>
+    <table>
+        <tr>
+            <th>Position</th>
+            <th>Player Name</th>
+            <th>Team</th>
+            <th>Points</th>
+        </tr>
+        {% for player in players %}
+        <tr>
+            <td>{{ player.position }}</td>
+            <td>{{ player.name }}</td>
+            <td>{{ player.team }}</td>
+            <td>{{ player.points }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="{{ url_for('home') }}">Home</a> <!-- Link to go back to Home -->
+</body>
+</html>
